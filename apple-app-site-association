@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "SE8UX94CL7.none.receiver",
+                "paths": [ "*" ]
+            }
+        ]
+    }
+}
