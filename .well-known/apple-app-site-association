@@ -1,11 +1,15 @@
 {
-    "applinks": {
-        "apps": [],
-        "details": [
-            {
-                "appID": "RNLL574Z54.none.receiver",
-                "paths": [ "/*" ]
-            }
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["SE8UX94CL7.none.receiver"],
+        "components": [
+          {
+            "/": "/*",
+            "comment": "Matches any URL path."
+          }
         ]
-    }
+      }
+    ]
+  }
 }
