@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Universal Link</title>
+</head>
+<body>
+    <h1>Test Universal Link</h1>
+    <p>Se l'app di e-banking è installata, dovrebbe aprirsi automaticamente. Altrimenti, rimarrai su questa pagina per pochi secondi.</p>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            // Costruisci l'URL del deep link
+            const status = 'accepted'; // o 'refused', 'acknowledged'
+            const username = 'john_doe';
+            const contractId = '12345';
+            const appXUrlScheme = `appx://handle?status=${status}&username=${username}&contractId=${contractId}`;
+            const fallbackUrl = `smartcontractapp://return?status=${status}&username=${username}&contractId=${contractId}`;
+
+            // Prova ad aprire l'app ricevente con l'URL scheme
+            window.location.href = appXUrlScheme;
+
+            // Fallback dopo qualche secondo se l'app non è installata
+            setTimeout(() => {
+                // Reindirizza al deep link di ritorno per l'app chiamante
+                window.location.href = fallbackUrl;
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
