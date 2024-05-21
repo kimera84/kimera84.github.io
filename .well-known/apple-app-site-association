@@ -5,8 +5,8 @@
         "appIDs": ["SE8UX94CL7.none.receiver"],
         "components": [
           {
-            "/": "/handle/*",
-            "comment": "Matches any URL path under /handle."
+            "/": "/*",
+            "comment": "Matches any URL path."
           }
         ]
       }
