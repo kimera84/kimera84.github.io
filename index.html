@@ -10,7 +10,7 @@
     <p>Se l'app di e-banking è installata, dovrebbe aprirsi automaticamente. Altrimenti, rimarrai su questa pagina per pochi secondi.</p>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            // Costruisci l'URL del deep link
+            const appXUrlScheme = `appx://`;
 
             // Prova ad aprire l'app ricevente con l'URL scheme
             window.location.href = appXUrlScheme;
