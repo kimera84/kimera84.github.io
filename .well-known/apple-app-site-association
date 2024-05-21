@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["SE8UX94CL7.none.receiver"],
+        "appIDs": ["SE8UX94CL7.app.receiver"],
         "components": [
           {
             "/": "/*",
