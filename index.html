@@ -10,7 +10,7 @@
     <p>Se l'app di e-banking è installata, dovrebbe aprirsi automaticamente. Altrimenti, rimarrai su questa pagina per pochi secondi.</p>
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
-            const appXUrlScheme = `appx://handle`;
+            const appXUrlScheme = `appx://handle?customParam=${customParam}`;
             const fallbackUrl = `smartcontractapp://return`;
 
             console.log("Tentativo di aprire l'app ricevente con URL scheme:", appXUrlScheme);
