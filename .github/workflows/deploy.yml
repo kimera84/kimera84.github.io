@@ -1,0 +1,35 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Assicurati che sia il branch corretto
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install -g http-server gh-pages
+
+    - name: Build and Deploy
+      run: |
+        mkdir public
+        cp -r * public/
+        cd public
+        npx http-server -p 8080 --cors -c-1 &
+        sleep 5
+        curl -X PUT -H "Content-Type: application/json" -d @.well-known/apple-app-site-association http://localhost:8080/.well-known/apple-app-site-association
+        cd ..
+        npx gh-pages -d public
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
