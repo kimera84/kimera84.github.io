@@ -11,15 +11,11 @@
     <script>
         document.addEventListener('DOMContentLoaded', (event) => {
             // Costruisci l'URL del deep link
-            const status = 'accepted'; // o 'refused', 'acknowledged'
-            const username = 'john_doe';
-            const contractId = '12345';
-            const appXUrlScheme = `appx://handle?status=${status}&username=${username}&contractId=${contractId}`;
 
             // Prova ad aprire l'app ricevente con l'URL scheme
             window.location.href = appXUrlScheme;
 
-            const fallbackUrl = `smartcontractapp://return?status=${status}&username=${username}&contractId=${contractId}`;
+            const fallbackUrl = `smartcontractapp://`;
 
             // Prova ad aprire l'app ricevente con l'URL scheme
             window.location.href = appXUrlScheme;
