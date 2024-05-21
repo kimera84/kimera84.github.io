@@ -15,16 +15,9 @@
             const username = 'john_doe';
             const contractId = '12345';
             const appXUrlScheme = `appx://handle?status=${status}&username=${username}&contractId=${contractId}`;
-            const fallbackUrl = `smartcontractapp://return?status=${status}&username=${username}&contractId=${contractId}`;
 
             // Prova ad aprire l'app ricevente con l'URL scheme
             window.location.href = appXUrlScheme;
-
-            // Fallback dopo qualche secondo se l'app non è installata
-            setTimeout(() => {
-                // Reindirizza al deep link di ritorno per l'app chiamante
-                window.location.href = fallbackUrl;
-            }, 5000);
         });
     </script>
 </body>
