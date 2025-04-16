@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["SE8UX94CL7.app.thereceiver"],
+        "appID": "SE8UX94CL7.com.swisssign.wallet",
         "components": [
           {
             "/": "/*",
