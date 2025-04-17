@@ -1,12 +1,11 @@
 {
-  "applinks": {
-    "details": [
+  "applinks":{
+    "details":[
       {
-        "appIDs": ["SE8UX94CL7.app.thereceiver"],
-        "components": [
+        "appID":"SE8UX94CL7.com.swisssign.wallet",
+        "components":[
           {
-            "/": "/*",
-            "comment": "Matches any URL path."
+            "/":"/websic/sign/wallet-app"
           }
         ]
       }
