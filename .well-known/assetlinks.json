@@ -1,8 +1,14 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "com.example.receiver",
-    "sha256_cert_fingerprints": ["DF:31:B7:F5:95:04:17:58:7C:CF:FF:1F:82:05:C9:86:E8:3A:FC:72:62:77:F6:E1:BC:D4:21:3F:54:5A:43:D2"]
+[
+  {
+    "relation":[
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target":{
+      "namespace":"android_app",
+      "package_name":"com.swisssign.wallet",
+      "sha256_cert_fingerprints":[
+        "70:D3:A0:04:40:97:AD:B6:99:23:C9:FB:C3:01:A2:84:40:76:34:A6:6F:EA:A2:AD:9B:93:53:63:C4:09:8B:2B"
+      ]
+    }
   }
-}]
+]
